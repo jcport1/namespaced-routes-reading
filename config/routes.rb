@@ -8,4 +8,14 @@ Rails.application.routes.draw do
   get '/admin/stats', to: 'stats#index'
 
   root 'posts#index'
+
+  #scope '/admin' do, module: 'admin' do
+  #resources :stats, only: [:index]
+  #end
+
+  #Use namespace method to clear up what you wrote above
+  #namespace :admin do 
+  #resources :stats, only: [:index]
+  #end 
+  end
 end
